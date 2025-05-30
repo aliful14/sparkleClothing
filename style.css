@@ -17,38 +17,54 @@ body {
   margin: auto;
 }
 
+/* Header */
 header {
   background-color: #333;
   color: #fff;
   padding: 1rem 0;
 }
 
+header .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header h1 {
-  display: inline-block;
+  font-size: 1.8rem;
 }
 
 nav {
-  float: right;
+  display: flex;
+  gap: 15px;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  margin-left: 20px;
+  font-size: 1rem;
 }
 
+/* Hero Section */
 .hero {
   background: #6c63ff;
   color: white;
-  padding: 60px 0;
+  padding: 60px 20px;
   text-align: center;
 }
 
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Cards Section */
 .cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 40px 0;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -56,7 +72,7 @@ nav a {
   background: white;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  flex: 1 1 250px;
+  flex: 1 1 300px;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
@@ -65,9 +81,40 @@ nav a {
   transform: scale(1.05);
 }
 
+/* Footer */
 footer {
   background: #333;
   color: white;
   text-align: center;
   padding: 20px 0;
+}
+
+/* ============================
+   Responsive Design (Mobile)
+=============================== */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 90%;
+  }
 }
