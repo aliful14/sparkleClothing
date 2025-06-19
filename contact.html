@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sparkle Clothing Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <navbar-component></navbar-component>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1>Get in Touch</h1>
+                <p>Ready to elevate your brand with premium RMG accessories? Let's start a conversation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Us</h3>
+                    <p>info@sparkleclothing.com</p>
+                    <p>sales@sparkleclothing.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p>+1 (555) 123-4567</p>
+                    <p>Mon-Fri: 9AM-6PM EST</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Visit Us</h3>
+                    <p>123 Fashion District</p>
+                    <p>New York, NY 10001</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-content">
+                    <h2>Send us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="product">Product Interest</label>
+                            <select id="product" name="product">
+                                <option value="">Select a product category</option>
+                                <option value="labels">Custom Labels</option>
+                                <option value="tags">Hang Tags</option>
+                                <option value="packaging">Packaging Solutions</option>
+                                <option value="accessories">Finishing Accessories</option>
+                                <option value="custom">Custom Solutions</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project requirements..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="form-sidebar">
+                    <div class="sidebar-content">
+                        <h3>Why Choose Sparkle?</h3>
+                        <ul class="benefits-list">
+                            <li>✓ Premium quality materials</li>
+                            <li>✓ Fast turnaround times</li>
+                            <li>✓ Custom design services</li>
+                            <li>✓ Competitive pricing</li>
+                            <li>✓ Excellent customer service</li>
+                        </ul>
+                        
+                        <div class="quote-info">
+                            <h4>Need a Quick Quote?</h4>
+                            <p>For urgent inquiries or bulk orders, call us directly at +1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our products and services</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What is the minimum order quantity?</h3>
+                    <p>Our minimum order quantities vary by product type. For labels, we typically require 100 pieces minimum, while hang tags start at 50 pieces. Contact us for specific requirements.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How long does production take?</h3>
+                    <p>Standard production time is 2-3 weeks for most products. Rush orders are available for an additional fee. Custom designs may require additional time for approval and setup.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you offer custom designs?</h3>
+                    <p>Yes! We have an in-house design team that can create custom labels, tags, and packaging solutions tailored to your brand. We'll work closely with you to bring your vision to life.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What materials do you use?</h3>
+                    <p>We use premium materials including polyester, cotton, satin, and specialty fabrics for labels. Our hang tags are made from high-quality cardboard, kraft paper, and specialty papers.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you ship internationally?</h3>
+                    <p>Yes, we ship worldwide. We work with reliable shipping partners to ensure your orders arrive safely and on time. Shipping costs and delivery times vary by location.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can I get samples before ordering?</h3>
+                    <p>Absolutely! We offer sample production for most products. This allows you to see and feel the quality before placing your full order. Sample fees apply but are credited toward your final order.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer-component></footer-component>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

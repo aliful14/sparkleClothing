@@ -1,60 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sparkle Clothing Company</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkle Clothing Company - Premium RMG Accessories</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Sparkle Clothing Company</h1>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Shop</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Navigation -->
+    <navbar-component></navbar-component>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Welcome to Sparkle Wear.co</h2>
-      <p>Discover bold, minimal, and timeless fashion pieces for every season.</p>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Premium RMG Accessories</h1>
+                <p class="hero-subtitle">Elevating fashion with quality labels, tags, and accessories that speak volumes about your brand.</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn btn-primary">Explore Products</a>
+                    <a href="about.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <span>Quality Craftsmanship</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="products">
-    <div class="container">
-      <a href="product.html" class="product-card">
-        <img src="assets/placeholder1.jpg" alt="Essential Tee" />
-        <h3>Essential Tee</h3>
-        <p>$29.99</p>
-      </a>
-      <div class="product-card">
-        <img src="assets/placeholder1.jpg" alt="Relaxed Hoodie" />
-        <h3>Relaxed Hoodie</h3>
-        <p>$49.99</p>
-      </div>
-      <div class="product-card">
-        <img src="assets/placeholder1.jpg" alt="Wide-Leg Trousers" />
-        <h3>Wide-Leg Trousers</h3>
-        <p>$59.99</p>
-      </div>
-      <div class="product-card">
-        <img src="assets/placeholder1.jpg" alt="Everyday Tank" />
-        <h3>Everyday Tank</h3>
-        <p>$24.99</p>
-      </div>
-    </div>
-  </section>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✦</div>
+                    <h3>Premium Quality</h3>
+                    <p>Exceptional materials and craftsmanship that meet the highest industry standards.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick turnaround times to keep your production schedule on track.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Custom Solutions</h3>
+                    <p>Tailored accessories that perfectly match your brand identity and requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Sparkle Clothing Company. All rights reserved.</p>
-    </div>
-  </footer>
+    <!-- Products Preview -->
+    <section class="products-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Products</h2>
+                <p>Discover our range of premium RMG accessories</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="image-placeholder">Labels</div>
+                    </div>
+                    <h3>Custom Labels</h3>
+                    <p>High-quality woven and printed labels for your garments</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="image-placeholder">Tags</div>
+                    </div>
+                    <h3>Hang Tags</h3>
+                    <p>Professional hang tags that enhance your product presentation</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="image-placeholder">Accessories</div>
+                    </div>
+                    <h3>Accessories</h3>
+                    <p>Complete range of finishing touches for your clothing line</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="products.html" class="btn btn-outline">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer-component></footer-component>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 

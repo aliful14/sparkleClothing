@@ -1,0 +1,481 @@
+{
+  "categories": {
+    "labels": {
+      "name": "Labels & Tags",
+      "description": "Premium woven, satin, and heat transfer labels for all your branding needs",
+      "products": [
+        {
+          "id": "woven-labels",
+          "name": "Woven Labels",
+          "subtitle": "Premium woven labels for branding inside clothing",
+          "description": "Premium woven labels for branding inside clothing, including neck labels and care labels. Features durable and classic finish perfect for all garment types.",
+          "category": "Labels & Tags",
+          "image_placeholder": "Woven",
+          "specifications": [
+            "Material: Polyester, Cotton, or Blend",
+            "Width: 10mm - 50mm",
+            "Length: Custom",
+            "Finish: Heat cut, laser cut, or folded"
+          ],
+          "common_uses": [
+            "Neck labels for shirts and tops",
+            "Care labels with washing instructions",
+            "Brand labels for identification",
+            "Size labels for easy reference"
+          ],
+          "key_features": [
+            "Durable and classic finish",
+            "Suitable for all garment types",
+            "High-quality thread construction",
+            "Long-lasting durability"
+          ],
+          "related_products": ["satin-labels", "heat-transfer-labels", "canvas-labels"]
+        },
+        {
+          "id": "satin-labels",
+          "name": "Satin Labels",
+          "subtitle": "Skin-friendly satin labels with glossy finish",
+          "description": "Skin-friendly satin labels with glossy finish, perfect for soft garments like lingerie and kidswear. Provides comfort and elegance for sensitive skin applications.",
+          "category": "Labels & Tags",
+          "image_placeholder": "Satin",
+          "specifications": [
+            "Material: Satin fabric",
+            "Finish: Glossy and smooth",
+            "Width: 15mm - 40mm",
+            "Skin-friendly construction"
+          ],
+          "common_uses": [
+            "Lingerie and intimate apparel",
+            "Kidswear and baby clothing",
+            "Delicate fabrics and materials",
+            "Premium inner branding"
+          ],
+          "key_features": [
+            "Skin-friendly material",
+            "Glossy finish",
+            "Comfortable for sensitive skin",
+            "Elegant appearance"
+          ],
+          "related_products": ["woven-labels", "heat-transfer-labels", "fabric-waist-tags"]
+        },
+        {
+          "id": "heat-transfer-labels",
+          "name": "Heat Transfer Labels",
+          "subtitle": "Tagless branding solution for seamless clothing",
+          "description": "Tagless branding solution for seamless clothing and activewear. Perfect for sportswear and garments where traditional labels would cause discomfort.",
+          "category": "Labels & Tags",
+          "image_placeholder": "Heat Transfer",
+          "specifications": [
+            "Application: Heat transfer",
+            "Material: Polyester or Cotton",
+            "Print Method: Digital or Screen",
+            "Finish: Seamless integration"
+          ],
+          "common_uses": [
+            "Sportswear and activewear",
+            "Seamless clothing",
+            "Tagless branding solutions",
+            "Care information printing"
+          ],
+          "key_features": [
+            "Tagless application",
+            "Seamless integration",
+            "Comfortable wear",
+            "Durable printing"
+          ],
+          "related_products": ["woven-labels", "satin-labels", "canvas-labels"]
+        },
+        {
+          "id": "canvas-labels",
+          "name": "Canvas Type Labels",
+          "subtitle": "Rugged and durable labels for heavy-duty applications",
+          "description": "Rugged and durable labels designed for heavy-duty applications. Perfect for workwear, bags, and jeans where strength and longevity are essential.",
+          "category": "Labels & Tags",
+          "image_placeholder": "Canvas",
+          "specifications": [
+            "Material: Canvas fabric",
+            "Construction: Heavy-duty",
+            "Width: 20mm - 60mm",
+            "Finish: Durable and rugged"
+          ],
+          "common_uses": [
+            "Workwear and uniforms",
+            "Bags and backpacks",
+            "Jeans and denim products",
+            "Heavy-duty applications"
+          ],
+          "key_features": [
+            "Rugged construction",
+            "Heavy-duty durability",
+            "Long-lasting quality",
+            "Strong material"
+          ],
+          "related_products": ["woven-labels", "fabric-patches", "pu-patches"]
+        },
+        {
+          "id": "fabric-waist-tags",
+          "name": "Fabric Waist Tags",
+          "subtitle": "Specialized tags for waistband applications",
+          "description": "Specialized tags placed inside waistbands, commonly showing size or branding information. Essential for jeans, trousers, and bottom wear.",
+          "category": "Labels & Tags",
+          "image_placeholder": "Waist Tag",
+          "specifications": [
+            "Placement: Inside waistband",
+            "Material: Fabric",
+            "Size: Custom dimensions",
+            "Application: Sewn or attached"
+          ],
+          "common_uses": [
+            "Jeans and trousers",
+            "Size identification",
+            "Brand information",
+            "Waistband applications"
+          ],
+          "key_features": [
+            "Waistband placement",
+            "Size identification",
+            "Brand information display",
+            "Comfortable wear"
+          ],
+          "related_products": ["woven-labels", "hang-tags", "elastic-plain"]
+        },
+        {
+          "id": "hang-tags",
+          "name": "Hang Tags",
+          "subtitle": "External product tags for retail presentation",
+          "description": "External product tags containing price, branding, and barcode information. Removed before wear but essential for retail presentation and product identification.",
+          "category": "Labels & Tags",
+          "image_placeholder": "Hang Tag",
+          "specifications": [
+            "Material: Cardboard, Kraft, or Specialty Paper",
+            "Size: Custom dimensions",
+            "Print: Offset or Digital",
+            "Finish: Matte, Gloss, or Embossed"
+          ],
+          "common_uses": [
+            "Retail product presentation",
+            "Price and barcode display",
+            "Brand information",
+            "Product identification"
+          ],
+          "key_features": [
+            "Retail presentation",
+            "Information display",
+            "Professional appearance",
+            "Easy removal"
+          ],
+          "related_products": ["fabric-waist-tags", "woven-labels", "fabric-patches"]
+        }
+      ]
+    },
+    "patches": {
+      "name": "Patches & Branding",
+      "description": "High-quality patches and branding solutions for premium product presentation",
+      "products": [
+        {
+          "id": "fabric-patches",
+          "name": "Fabric Patches",
+          "subtitle": "Decorative or branding patches for outerwear",
+          "description": "Decorative or branding patches for outerwear, backpacks, and uniforms. Available in various materials and finishes for different applications.",
+          "category": "Patches & Branding",
+          "image_placeholder": "Fabric Patch",
+          "specifications": [
+            "Material: Various fabrics",
+            "Application: Sewn or ironed",
+            "Size: Custom dimensions",
+            "Finish: Multiple options"
+          ],
+          "common_uses": [
+            "Outerwear and jackets",
+            "Backpacks and bags",
+            "Uniforms and workwear",
+            "Decorative applications"
+          ],
+          "key_features": [
+            "Versatile applications",
+            "Multiple material options",
+            "Decorative appeal",
+            "Durable construction"
+          ],
+          "related_products": ["jacron-patches", "pu-patches", "leather-patches"]
+        },
+        {
+          "id": "jacron-patches",
+          "name": "Jacron Patch Labels",
+          "subtitle": "Eco-friendly alternative to leather patches",
+          "description": "Eco-friendly alternative to leather patches, commonly used on denim products. Provides the look and feel of leather while being more sustainable.",
+          "category": "Patches & Branding",
+          "image_placeholder": "Jacron",
+          "specifications": [
+            "Material: Jacron (eco-friendly)",
+            "Appearance: Leather-like",
+            "Application: Denim products",
+            "Finish: Natural leather look"
+          ],
+          "common_uses": [
+            "Jeans and denim products",
+            "Jackets and outerwear",
+            "Eco-friendly branding",
+            "Leather alternative"
+          ],
+          "key_features": [
+            "Eco-friendly material",
+            "Leather-like appearance",
+            "Sustainable option",
+            "Denim compatible"
+          ],
+          "related_products": ["fabric-patches", "pu-patches", "leather-patches"]
+        },
+        {
+          "id": "pu-patches",
+          "name": "PU Patches",
+          "subtitle": "Imitation leather branding patches",
+          "description": "Imitation leather branding patches offering affordability and versatility. Perfect for jeans, jackets, and bags where leather-like appearance is desired.",
+          "category": "Patches & Branding",
+          "image_placeholder": "PU Patch",
+          "specifications": [
+            "Material: PU (Polyurethane)",
+            "Appearance: Leather-like",
+            "Cost: Affordable",
+            "Application: Versatile"
+          ],
+          "common_uses": [
+            "Jeans and denim wear",
+            "Jackets and outerwear",
+            "Bags and accessories",
+            "Cost-effective branding"
+          ],
+          "key_features": [
+            "Affordable option",
+            "Leather-like appearance",
+            "Versatile applications",
+            "Cost-effective"
+          ],
+          "related_products": ["fabric-patches", "jacron-patches", "leather-patches"]
+        },
+        {
+          "id": "leather-patches",
+          "name": "Original Leather Patches",
+          "subtitle": "High-end branding labels for luxury products",
+          "description": "High-end branding labels for luxury apparel, footwear, and leather goods. Premium quality leather patches that add sophistication to any product.",
+          "category": "Patches & Branding",
+          "image_placeholder": "Leather",
+          "specifications": [
+            "Material: Genuine leather",
+            "Quality: Premium grade",
+            "Application: Luxury products",
+            "Finish: High-end appearance"
+          ],
+          "common_uses": [
+            "Luxury apparel",
+            "Footwear and shoes",
+            "Leather goods",
+            "Premium branding"
+          ],
+          "key_features": [
+            "Premium leather quality",
+            "Luxury appearance",
+            "High-end branding",
+            "Sophisticated look"
+          ],
+          "related_products": ["fabric-patches", "jacron-patches", "pu-patches"]
+        }
+      ]
+    },
+    "elastic": {
+      "name": "Elastic & Trims",
+      "description": "Functional and decorative elastic products for perfect garment finishing",
+      "products": [
+        {
+          "id": "elastic-plain",
+          "name": "Elastic Plain",
+          "subtitle": "Versatile elastic for waistbands and trims",
+          "description": "Versatile elastic used as waistbands or trims in underwear and sportswear. Provides comfort and flexibility for active and intimate apparel.",
+          "category": "Elastic & Trims",
+          "image_placeholder": "Elastic",
+          "specifications": [
+            "Material: Elastic fabric",
+            "Width: Various sizes",
+            "Stretch: High elasticity",
+            "Application: Waistbands and trims"
+          ],
+          "common_uses": [
+            "Underwear and intimate wear",
+            "Sportswear and activewear",
+            "Waistbands and cuffs",
+            "Functional trims"
+          ],
+          "key_features": [
+            "High elasticity",
+            "Comfortable wear",
+            "Versatile applications",
+            "Durable stretch"
+          ],
+          "related_products": ["jacket-elastic", "drawstring-cords", "waist-belts"]
+        },
+        {
+          "id": "jacket-elastic",
+          "name": "Jacket Elastic",
+          "subtitle": "Specialized elastic for jacket applications",
+          "description": "Specialized stretchable component for jackets, used in cuffs, hems, and waistbands. Provides perfect fit and comfort for outerwear applications.",
+          "category": "Elastic & Trims",
+          "image_placeholder": "Jacket Elastic",
+          "specifications": [
+            "Application: Jacket components",
+            "Areas: Cuffs, hems, waistbands",
+            "Material: Specialized elastic",
+            "Fit: Perfect adjustment"
+          ],
+          "common_uses": [
+            "Jacket cuffs and hems",
+            "Waistband applications",
+            "Outerwear finishing",
+            "Fit adjustment"
+          ],
+          "key_features": [
+            "Specialized for jackets",
+            "Perfect fit adjustment",
+            "Outerwear compatibility",
+            "Comfortable wear"
+          ],
+          "related_products": ["elastic-plain", "waist-belts", "herringbone-tape"]
+        },
+        {
+          "id": "drawstring-cords",
+          "name": "Drawstring Cords",
+          "subtitle": "Functional and decorative pull cords",
+          "description": "Functional and decorative pull cords for hoodies, joggers, and activewear. Available in various materials and finishes for different applications.",
+          "category": "Elastic & Trims",
+          "image_placeholder": "Drawstring",
+          "specifications": [
+            "Material: Various options",
+            "Application: Pull cords",
+            "Function: Adjustable fit",
+            "Finish: Multiple styles"
+          ],
+          "common_uses": [
+            "Hoodies and sweatshirts",
+            "Joggers and sweatpants",
+            "Activewear and sportswear",
+            "Functional and decorative"
+          ],
+          "key_features": [
+            "Adjustable fit",
+            "Functional design",
+            "Decorative appeal",
+            "Versatile applications"
+          ],
+          "related_products": ["tube-cords", "elastic-plain", "waist-belts"]
+        },
+        {
+          "id": "tube-cords",
+          "name": "Tube D. Cord",
+          "subtitle": "Tubular drawstring cord for activewear",
+          "description": "Tubular drawstring cord specifically designed for activewear, hoodies, and shorts. Provides durability and comfort for frequent use.",
+          "category": "Elastic & Trims",
+          "image_placeholder": "Tube Cord",
+          "specifications": [
+            "Type: Tubular construction",
+            "Application: Activewear",
+            "Durability: High",
+            "Comfort: Enhanced"
+          ],
+          "common_uses": [
+            "Activewear and sportswear",
+            "Hoodies and sweatshirts",
+            "Shorts and joggers",
+            "Durable drawstring solution"
+          ],
+          "key_features": [
+            "Tubular construction",
+            "Enhanced durability",
+            "Activewear optimized",
+            "Comfortable grip"
+          ],
+          "related_products": ["drawstring-cords", "elastic-plain", "jacket-elastic"]
+        },
+        {
+          "id": "waist-belts",
+          "name": "Waist Belts",
+          "subtitle": "Functional and decorative belts",
+          "description": "Functional and decorative belts for dresses, coats, and trousers. Available in various styles and materials to complement any garment.",
+          "category": "Elastic & Trims",
+          "image_placeholder": "Waist Belt",
+          "specifications": [
+            "Application: Waist adjustment",
+            "Style: Functional and decorative",
+            "Material: Various options",
+            "Design: Multiple styles"
+          ],
+          "common_uses": [
+            "Dresses and gowns",
+            "Coats and outerwear",
+            "Trousers and pants",
+            "Decorative finishing"
+          ],
+          "key_features": [
+            "Functional adjustment",
+            "Decorative appeal",
+            "Versatile styling",
+            "Multiple materials"
+          ],
+          "related_products": ["elastic-plain", "jacket-elastic", "herringbone-tape"]
+        },
+        {
+          "id": "herringbone-tape",
+          "name": "Herringbone Tape",
+          "subtitle": "Flat woven tape with herringbone pattern",
+          "description": "Flat woven tape with distinctive herringbone pattern, used for seams, reinforcement, or decoration. Provides both strength and visual appeal.",
+          "category": "Elastic & Trims",
+          "image_placeholder": "Herringbone",
+          "specifications": [
+            "Pattern: Herringbone weave",
+            "Construction: Flat woven",
+            "Application: Seams and reinforcement",
+            "Strength: High durability"
+          ],
+          "common_uses": [
+            "Seam reinforcement",
+            "Decorative trims",
+            "Garment finishing",
+            "Structural support"
+          ],
+          "key_features": [
+            "Herringbone pattern",
+            "Structural strength",
+            "Decorative appeal",
+            "Durable construction"
+          ],
+          "related_products": ["polyester-tape", "waist-belts", "jacket-elastic"]
+        },
+        {
+          "id": "polyester-tape",
+          "name": "Polyester Tape",
+          "subtitle": "General-purpose tape for trims",
+          "description": "General-purpose tape for trims, available in different finishes. Versatile solution for garments, bags, and shoes requiring durable trim applications.",
+          "category": "Elastic & Trims",
+          "image_placeholder": "Polyester",
+          "specifications": [
+            "Material: Polyester",
+            "Application: General trims",
+            "Finish: Various options",
+            "Durability: High"
+          ],
+          "common_uses": [
+            "Garment trims",
+            "Bags and accessories",
+            "Shoes and footwear",
+            "General trim applications"
+          ],
+          "key_features": [
+            "Versatile applications",
+            "High durability",
+            "Various finishes",
+            "General purpose"
+          ],
+          "related_products": ["herringbone-tape", "elastic-plain", "waist-belts"]
+        }
+      ]
+    }
+  }
+} 
