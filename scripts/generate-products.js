@@ -151,14 +151,14 @@ function generateCategoryPage(category, categoryKey) {
     <navbar-component></navbar-component>
 
     <!-- Category Hero -->
-    <section class="category-hero">
-        <div class="container">
-            <div class="category-hero-content">
-                <h1>${category.name}</h1>
-                <p>${category.description}</p>
-            </div>
-        </div>
-    </section>
+    // <section class="category-hero">
+    //     <div class="container">
+    //         <div class="category-hero-content">
+    //             <h1>${category.name}</h1>
+    //             <p>${category.description}</p>
+    //         </div>
+    //     </div>
+    // </section>
 
     <!-- Category Products -->
     <section class="category-products">
