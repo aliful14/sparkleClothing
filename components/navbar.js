@@ -6,7 +6,8 @@ class Navbar extends HTMLElement {
     connectedCallback() {
         // Determine if we're in a subdirectory (products folder)
         const isInProductsFolder = window.location.pathname.includes('/products/');
-        const basePath = isInProductsFolder ? '../' : '';
+        const isInProductSubfolder = window.location.pathname.match(/\/products\/[^\/]+\//);
+        const basePath = isInProductSubfolder ? '../../' : (isInProductsFolder ? '../' : '');
         
         this.innerHTML = `
             <nav>

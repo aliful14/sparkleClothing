@@ -6,6 +6,7 @@
     <title>Contact Us - Sparkle Clothing Company</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -28,20 +29,12 @@
                 <div class="contact-card">
                     <div class="contact-icon">📧</div>
                     <h3>Email Us</h3>
-                    <p>info@sparkleclothing.com</p>
-                    <p>sales@sparkleclothing.com</p>
+                    <p><a href="mailto:info@sparklewear.co" class="email-link">info@sparklewear.co</a></p>
                 </div>
                 <div class="contact-card">
-                    <div class="contact-icon">📞</div>
-                    <h3>Call Us</h3>
-                    <p>+1 (555) 123-4567</p>
-                    <p>Mon-Fri: 9AM-6PM EST</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <h3>Visit Us</h3>
-                    <p>123 Fashion District</p>
-                    <p>New York, NY 10001</p>
+                    <div class="contact-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/15197815998" target="_blank" class="whatsapp-link">+1 (519) 781-5998</a></p>
                 </div>
             </div>
         </div>
@@ -55,7 +48,8 @@
                     <h2>Send us a Message</h2>
                     <p>Fill out the form below and we'll get back to you within 24 hours.</p>
                     
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="mailto:info@sparklewear.co?subject=Web Contact Form" method="post" enctype="text/plain">
+                        <input type="hidden" name="subject" value="Web Contact Form">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required>
@@ -110,7 +104,8 @@
                         
                         <div class="quote-info">
                             <h4>Need a Quick Quote?</h4>
-                            <p>For urgent inquiries or bulk orders, call us directly at +1 (555) 123-4567</p>
+                            <p>For urgent inquiries or bulk orders, call us directly at</p>
+                            <p><a href="tel:+15197815998" class="phone-link">+1 (519) 781-5998</a></p>
                         </div>
                     </div>
                 </div>

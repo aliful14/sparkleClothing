@@ -7,16 +7,42 @@ const productsData = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/pr
 // Read the template
 const template = fs.readFileSync(path.join(__dirname, '../templates/product-template.html'), 'utf8');
 
+// Function to check for product images in a folder
+function findProductImage(productFolder) {
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
+    try {
+        const files = fs.readdirSync(productFolder);
+        for (const file of files) {
+            const ext = path.extname(file).toLowerCase();
+            if (imageExtensions.includes(ext)) {
+                return file;
+            }
+        }
+    } catch (error) {
+        // Folder doesn't exist or no access
+    }
+    return null;
+}
+
 // Function to generate a product page
-function generateProductPage(product) {
+function generateProductPage(product, productFolder) {
     let pageContent = template;
+    
+    // Check for product image
+    const productImage = findProductImage(productFolder);
     
     // Replace placeholders with actual data
     pageContent = pageContent.replace(/{{PRODUCT_NAME}}/g, product.name);
     pageContent = pageContent.replace(/{{PRODUCT_SUBTITLE}}/g, product.subtitle);
     pageContent = pageContent.replace(/{{PRODUCT_DESCRIPTION}}/g, product.description);
     pageContent = pageContent.replace(/{{PRODUCT_CATEGORY}}/g, product.category);
-    pageContent = pageContent.replace(/{{PRODUCT_IMAGE_PLACEHOLDER}}/g, product.image_placeholder);
+    
+    // Handle image or placeholder
+    if (productImage) {
+        pageContent = pageContent.replace(/<div class="image-placeholder">{{PRODUCT_IMAGE_PLACEHOLDER}}<\/div>/g, `<img src="${productImage}" alt="${product.name}" class="product-image">`);
+    } else {
+        pageContent = pageContent.replace(/{{PRODUCT_IMAGE_PLACEHOLDER}}/g, product.image_placeholder);
+    }
     
     // Generate specifications HTML
     const specsHtml = product.specifications.map(spec => `<li>${spec}</li>`).join('\n');
@@ -30,9 +56,10 @@ function generateProductPage(product) {
     const featuresHtml = product.key_features.map(feature => `<li>${feature}</li>`).join('\n');
     pageContent = pageContent.replace(/{{PRODUCT_FEATURES}}/g, featuresHtml);
     
-    // Generate related products HTML
+    // Generate related products HTML (commented out)
     const relatedProductsHtml = generateRelatedProductsHtml(product.related_products, productsData);
-    pageContent = pageContent.replace(/{{RELATED_PRODUCTS}}/g, relatedProductsHtml);
+    const commentedRelatedProducts = `<!--\n${relatedProductsHtml}\n-->`;
+    pageContent = pageContent.replace(/{{RELATED_PRODUCTS}}/g, commentedRelatedProducts);
     
     return pageContent;
 }
@@ -51,16 +78,24 @@ function generateRelatedProductsHtml(relatedProductIds, allProductsData) {
     });
     
     // Generate HTML for related products (limit to 3)
-    const relatedHtml = relatedProducts.slice(0, 3).map(product => `
+    const relatedHtml = relatedProducts.slice(0, 3).map(product => {
+        const productFolder = path.join(__dirname, '../products', product.id);
+        const productImage = findProductImage(productFolder);
+        const imageHtml = productImage 
+            ? `<img src="../${product.id}/${productImage}" alt="${product.name}" class="product-image">` 
+            : `<div class="image-placeholder">${product.image_placeholder}</div>`;
+        
+        return `
         <div class="related-product-card">
             <div class="related-product-image">
-                <div class="image-placeholder">${product.image_placeholder}</div>
+                ${imageHtml}
             </div>
             <h3>${product.name}</h3>
             <p>${product.subtitle}</p>
-            <a href="${product.id}.html" class="btn btn-outline">View Details</a>
+            <a href="../${product.id}/index.html" class="btn btn-outline">View Details</a>
         </div>
-    `).join('');
+    `;
+    }).join('');
     
     return relatedHtml;
 }
@@ -74,12 +109,18 @@ if (!fs.existsSync(productsDir)) {
 // Generate individual product pages
 Object.values(productsData.categories).forEach(category => {
     category.products.forEach(product => {
-        const pageContent = generateProductPage(product);
-        const fileName = `${product.id}.html`;
-        const filePath = path.join(productsDir, fileName);
+        // Create product folder
+        const productFolder = path.join(productsDir, product.id);
+        if (!fs.existsSync(productFolder)) {
+            fs.mkdirSync(productFolder, { recursive: true });
+        }
+        
+        const pageContent = generateProductPage(product, productFolder);
+        const fileName = 'index.html';
+        const filePath = path.join(productFolder, fileName);
         
         fs.writeFileSync(filePath, pageContent);
-        console.log(`Generated: ${fileName}`);
+        console.log(`Generated: ${product.id}/${fileName}`);
     });
 });
 
@@ -107,32 +148,7 @@ function generateCategoryPage(category, categoryKey) {
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Sparkle</h2>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../about.html" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../products.html" class="nav-link active">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+    <navbar-component></navbar-component>
 
     <!-- Category Hero -->
     <section class="category-hero">
@@ -148,51 +164,34 @@ function generateCategoryPage(category, categoryKey) {
     <section class="category-products">
         <div class="container">
             <div class="products-grid">
-                ${category.products.map(product => `
+                ${category.products.map(product => {
+                    const productFolder = path.join(__dirname, '../products', product.id);
+                    const productImage = findProductImage(productFolder);
+                    const imageHtml = productImage 
+                        ? `<img src="${product.id}/${productImage}" alt="${product.name}" class="product-image">` 
+                        : `<div class="image-placeholder">${product.image_placeholder}</div>`;
+                    
+                    return `
                 <div class="product-card">
                     <div class="product-image">
-                        <div class="image-placeholder">${product.image_placeholder}</div>
+                        ${imageHtml}
                     </div>
                     <h3>${product.name}</h3>
                     <p>${product.subtitle}</p>
                     <div class="product-actions">
-                        <a href="${product.id}.html" class="btn btn-primary">View Details</a>
+                        <a href="${product.id}/index.html" class="btn btn-primary">View Details</a>
                     </div>
                 </div>
-                `).join('')}
+                `;
+                }).join('')}
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Sparkle</h3>
-                    <p>Premium RMG accessories for discerning brands.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../products.html">Products</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>Email: info@sparkleclothing.com</p>
-                    <p>Phone: +1 (555) 123-4567</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Sparkle Clothing Company. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer-component></footer-component>
 
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
     <script src="../script.js"></script>
 </body>
 </html>`;

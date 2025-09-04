@@ -6,6 +6,7 @@
     <title>Our Products - Sparkle Clothing Company</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -16,164 +17,359 @@
         <div class="container">
             <h1>Our Products</h1>
             <p>Discover our comprehensive range of RMG accessories</p>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-bar">
+                    <div class="search-input-wrapper">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" id="productSearch" class="search-input" placeholder="Search products..." autocomplete="off">
+                        <button class="clear-search" id="clearSearch" style="display: none;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Search Results -->
+                <div class="search-results" id="searchResults" style="display: none;">
+                    <div class="search-results-header">
+                        <span class="results-count" id="resultsCount">0 products found</span>
+                    </div>
+                    <div class="search-results-list" id="searchResultsList">
+                        <!-- Search results will be populated here -->
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Products Grid -->
     <section class="products-section">
         <div class="container">
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Woven Labels</div>
-                    </div>
-                    <h3>Woven Labels</h3>
-                    <p>Premium woven labels for brand identity</p>
-                    <a href="products/woven-labels.html" class="btn btn-outline">View Details</a>
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tab-navigation">
+                    <button class="tab-button active" data-tab="labels">
+                        
+                        <span class="tab-label">Labels</span>
+                        
+                    </button>
+                    <button class="tab-button" data-tab="tags">
+                       
+                        <span class="tab-label">Tags</span>
+                        
+                    </button>
+                    <button class="tab-button" data-tab="patches">
+                        
+                        <span class="tab-label">Patches</span>
+                        
+                    </button>
+                    <button class="tab-button" data-tab="tapes">
+                        
+                        <span class="tab-label">Tapes</span>
+                        
+                    </button>
+                    <button class="tab-button" data-tab="cords">
+                        
+                        <span class="tab-label">Cords & Elastics</span>
+                        
+                    </button>
+                    <!-- <button class="tab-button" data-tab="stickers">
+                        
+                        <span class="tab-label">Stickers</span>
+                        
+                    </button> -->
                 </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Satin Labels</div>
+
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Labels Tab -->
+                    <div class="tab-pane active" id="labels">
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Woven Labels</div>
+                                </div>
+                                <h3>Woven Labels</h3>
+                                <p>Premium woven labels for brand identity</p>
+                                <a href="products/woven-labels/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Satin Labels</div>
+                                </div>
+                                <h3>Satin Labels</h3>
+                                <p>Smooth and elegant satin labels</p>
+                                <a href="products/satin-labels/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Heat Transfer</div>
+                                </div>
+                                <h3>Heat Transfer Labels</h3>
+                                <p>Durable heat transfer labels</p>
+                                <a href="products/heat-transfer-labels/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Canvas Labels</div>
+                                </div>
+                                <h3>Canvas Labels</h3>
+                                <p>Rugged and durable canvas labels</p>
+                                <a href="products/canvas-labels/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Satin Labels</h3>
-                    <p>Smooth and elegant satin labels</p>
-                    <a href="products/satin-labels.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Heat Transfer</div>
+
+                    <!-- Tags Tab -->
+                    <div class="tab-pane" id="tags">
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Hang Tags</div>
+                                </div>
+                                <h3>Hang Tags</h3>
+                                <p>Custom designed hang tags</p>
+                                <a href="products/hang-tags/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Waist Tags</div>
+                                </div>
+                                <h3>Fabric Waist Tags</h3>
+                                <p>Comfortable waist tags</p>
+                                <a href="products/fabric-waist-tags/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Heat Transfer Labels</h3>
-                    <p>Durable heat transfer labels</p>
-                    <a href="products/heat-transfer-labels.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Canvas Labels</div>
+
+                    <!-- Patches Tab -->
+                    <div class="tab-pane" id="patches">
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Fabric Patches</div>
+                                </div>
+                                <h3>Fabric Patches</h3>
+                                <p>High-quality fabric patches</p>
+                                <a href="products/fabric-patches/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Leather Patches</div>
+                                </div>
+                                <h3>Leather Patches</h3>
+                                <p>Premium leather patches</p>
+                                <a href="products/leather-patches/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">PU Patches</div>
+                                </div>
+                                <h3>PU Patches</h3>
+                                <p>Durable PU leather patches</p>
+                                <a href="products/pu-patches/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Jacron Patches</div>
+                                </div>
+                                <h3>Jacron Patches</h3>
+                                <p>Eco-friendly leather alternative</p>
+                                <a href="products/jacron-patches/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Canvas Labels</h3>
-                    <p>Rugged and durable canvas labels</p>
-                    <a href="products/canvas-labels.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Fabric Patches</div>
+
+                    <!-- Tapes Tab -->
+                    <div class="tab-pane" id="tapes">
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Herringbone</div>
+                                </div>
+                                <h3>Herringbone Tape</h3>
+                                <p>Flat woven tape with pattern</p>
+                                <a href="products/herringbone-tape/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Polyester</div>
+                                </div>
+                                <h3>Polyester Tape</h3>
+                                <p>General-purpose trim tape</p>
+                                <a href="products/polyester-tape/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Satin Tape</div>
+                                </div>
+                                <h3>Satin Tape</h3>
+                                <p>Smooth decorative tape for garment finishing</p>
+                                <a href="products/satin-tape/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Reflective</div>
+                                </div>
+                                <h3>Reflective Tape</h3>
+                                <p>High-visibility safety tape for enhanced visibility</p>
+                                <a href="products/reflective-tape/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Mobilon</div>
+                                </div>
+                                <h3>Mobilon Tape</h3>
+                                <p>Specialized zipper and closure tape</p>
+                                <a href="products/mobilon-tape/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Velcro</div>
+                                </div>
+                                <h3>Velcro Tape</h3>
+                                <p>Hook and loop fastening tape</p>
+                                <a href="products/velcro-tape/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Velvet</div>
+                                </div>
+                                <h3>Velvet Tape</h3>
+                                <p>Luxurious velvet tape for premium applications</p>
+                                <a href="products/velvet-tape/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Scotch</div>
+                                </div>
+                                <h3>Scotch Tape</h3>
+                                <p>Clear adhesive tape for general applications</p>
+                                <a href="products/scotch-tape/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Gum Tape</div>
+                                </div>
+                                <h3>Gum Tape</h3>
+                                <p>Water-activated tape for secure packaging</p>
+                                <a href="products/gum-tape/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Fabric Patches</h3>
-                    <p>High-quality fabric patches</p>
-                    <a href="products/fabric-patches.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Leather Patches</div>
+
+                    <!-- Cords & Elastics Tab -->
+                    <div class="tab-pane" id="cords">
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Drawstring</div>
+                                </div>
+                                <h3>Drawstring Cords</h3>
+                                <p>Premium drawstring cords</p>
+                                <a href="products/drawstring-cords/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Tube Cords</div>
+                                </div>
+                                <h3>Tube D. Cords</h3>
+                                <p>Tubular drawstring cords</p>
+                                <a href="products/tube-cords/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Plain Elastic</div>
+                                </div>
+                                <h3>Plain Elastic</h3>
+                                <p>Quality plain elastic bands</p>
+                                <a href="products/elastic-plain/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Jacket Elastic</div>
+                                </div>
+                                <h3>Jacket Elastic</h3>
+                                <p>Specialized jacket elastics</p>
+                                <a href="products/jacket-elastic/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Waist Belt</div>
+                                </div>
+                                <h3>Waist Belts</h3>
+                                <p>Functional and decorative belts</p>
+                                <a href="products/waist-belts/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Leather Patches</h3>
-                    <p>Premium leather patches</p>
-                    <a href="products/leather-patches.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">PU Patches</div>
+
+                    <!-- Stickers Tab -->
+                    <div class="tab-pane" id="stickers">
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Barcode</div>
+                                </div>
+                                <h3>Barcode Stickers</h3>
+                                <p>Durable barcode stickers for identification</p>
+                                <a href="products/barcode-stickers/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Carton</div>
+                                </div>
+                                <h3>Carton Stickers</h3>
+                                <p>Heavy-duty shipping and packaging stickers</p>
+                                <a href="products/carton-stickers/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Poly</div>
+                                </div>
+                                <h3>Poly Stickers</h3>
+                                <p>Waterproof and durable labeling solutions</p>
+                                <a href="products/poly-stickers/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                            
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder">Thermal</div>
+                                </div>
+                                <h3>Thermal Stickers</h3>
+                                <p>Heat-sensitive labeling solutions</p>
+                                <a href="products/thermal-stickers/index.html" class="btn btn-outline">View Details</a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>PU Patches</h3>
-                    <p>Durable PU leather patches</p>
-                    <a href="products/pu-patches.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Jacron Patches</div>
-                    </div>
-                    <h3>Jacron Patches</h3>
-                    <p>Eco-friendly leather alternative</p>
-                    <a href="products/jacron-patches.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Hang Tags</div>
-                    </div>
-                    <h3>Hang Tags</h3>
-                    <p>Custom designed hang tags</p>
-                    <a href="products/hang-tags.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Waist Tags</div>
-                    </div>
-                    <h3>Fabric Waist Tags</h3>
-                    <p>Comfortable waist tags</p>
-                    <a href="products/fabric-waist-tags.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Plain Elastic</div>
-                    </div>
-                    <h3>Plain Elastic</h3>
-                    <p>Quality plain elastic bands</p>
-                    <a href="products/elastic-plain.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Jacket Elastic</div>
-                    </div>
-                    <h3>Jacket Elastic</h3>
-                    <p>Specialized jacket elastics</p>
-                    <a href="products/jacket-elastic.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Drawstring</div>
-                    </div>
-                    <h3>Drawstring Cords</h3>
-                    <p>Premium drawstring cords</p>
-                    <a href="products/drawstring-cords.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Tube Cords</div>
-                    </div>
-                    <h3>Tube D. Cords</h3>
-                    <p>Tubular drawstring cords</p>
-                    <a href="products/tube-cords.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Waist Belt</div>
-                    </div>
-                    <h3>Waist Belts</h3>
-                    <p>Functional and decorative belts</p>
-                    <a href="products/waist-belts.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Herringbone</div>
-                    </div>
-                    <h3>Herringbone Tape</h3>
-                    <p>Flat woven tape with pattern</p>
-                    <a href="products/herringbone-tape.html" class="btn btn-outline">View Details</a>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">Polyester</div>
-                    </div>
-                    <h3>Polyester Tape</h3>
-                    <p>General-purpose trim tape</p>
-                    <a href="products/polyester-tape.html" class="btn btn-outline">View Details</a>
                 </div>
             </div>
         </div>

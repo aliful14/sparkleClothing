@@ -6,7 +6,8 @@ class Footer extends HTMLElement {
     connectedCallback() {
         // Determine if we're in a subdirectory (products folder)
         const isInProductsFolder = window.location.pathname.includes('/products/');
-        const basePath = isInProductsFolder ? '../' : '';
+        const isInProductSubfolder = window.location.pathname.match(/\/products\/[^\/]+\//);
+        const basePath = isInProductSubfolder ? '../../' : (isInProductsFolder ? '../' : '');
         
         this.innerHTML = `
             <footer class="footer">
@@ -27,8 +28,8 @@ class Footer extends HTMLElement {
                         </div>
                         <div class="footer-section">
                             <h4>Contact Info</h4>
-                            <p>Email: info@sparkleclothing.com</p>
-                            <p>Phone: +1 (555) 123-4567</p>
+                            <p>Email: <a href="mailto:info@sparklewear.co" class="footer-email-link">info@sparklewear.co</a></p>
+                            <p>Phone: <a href="tel:+15197815998" class="footer-phone-link">+1 (519) 781-5998</a></p>
                         </div>
                     </div>
                     <div class="footer-bottom">

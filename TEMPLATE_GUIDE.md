@@ -53,7 +53,7 @@ This will:
 
 After generation, you'll have:
 
-- Individual product pages: `products/woven-labels.html`, `products/satin-labels.html`, etc.
+- Individual product pages: `products/woven-labels/index.html`, `products/satin-labels/index.html`, etc.
 - Category pages: `products/labels.html`, `products/patches.html`, `products/elastic.html`
 - All pages linked to the main products page
 
