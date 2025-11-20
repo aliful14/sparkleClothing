@@ -306,6 +306,14 @@ body {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
+.products-preview .product-card {
+    cursor: pointer;
+}
+
+.products-preview .product-card:hover {
+    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.2);
+}
+
 .product-image {
     height: 200px;
     background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
@@ -345,6 +353,30 @@ body {
     font-weight: 600;
     margin: 1.5rem 1.5rem 0.5rem;
     color: #1a1a1a;
+}
+
+.product-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0 1.5rem 1.5rem;
+    margin-top: 1rem;
+}
+
+.example-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .example-badge {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
 }
 
 .product-card p {
