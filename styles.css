@@ -1955,7 +1955,7 @@ navbar-component .burger div {
 /* Coming Soon Styles */
 .coming-soon-header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .coming-soon-header h3 {
@@ -1968,6 +1968,63 @@ navbar-component .burger div {
 .coming-soon-header p {
     color: #666;
     font-size: 1rem;
+}
+
+.coming-soon-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.coming-soon-category {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.coming-soon-category:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.coming-soon-category h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.coming-soon-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coming-soon-list li {
+    padding: 0.5rem 0;
+    color: #4b5563;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 1.5rem;
+    transition: color 0.2s ease;
+}
+
+.coming-soon-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.coming-soon-list li:hover {
+    color: #1a1a1a;
 }
 
 
@@ -2246,6 +2303,23 @@ navbar-component .burger div {
     
     .coming-soon-header h3 {
         font-size: 1.5rem;
+    }
+    
+    .coming-soon-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .coming-soon-category {
+        padding: 1.25rem;
+    }
+    
+    .coming-soon-category h4 {
+        font-size: 1rem;
+    }
+    
+    .coming-soon-list li {
+        font-size: 0.9rem;
     }
     
     .tab-count {

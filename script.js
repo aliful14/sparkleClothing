@@ -299,11 +299,13 @@ function initializeSearch() {
         { name: 'Gum Tape', description: 'Water-activated tape for secure packaging', category: 'Tapes', url: 'products/gum-tape/index.html', keywords: ['gum', 'tape', 'water', 'packaging'] },
         
         // Cords & Elastics
-        { name: 'Drawstring Cords', description: 'Premium drawstring cords', category: 'Cords & Elastics', url: 'products/drawstring-cords/index.html', keywords: ['drawstring', 'cord', 'premium'] },
         { name: 'Tube D. Cords', description: 'Tubular drawstring cords', category: 'Cords & Elastics', url: 'products/tube-cords/index.html', keywords: ['tube', 'cord', 'tubular', 'drawstring'] },
         { name: 'Plain Elastic', description: 'Quality plain elastic bands', category: 'Cords & Elastics', url: 'products/elastic-plain/index.html', keywords: ['plain', 'elastic', 'band', 'quality'] },
-        { name: 'Jacket Elastic', description: 'Specialized jacket elastics', category: 'Cords & Elastics', url: 'products/jacket-elastic/index.html', keywords: ['jacket', 'elastic', 'specialized'] },
-        { name: 'Waist Belts', description: 'Functional and decorative belts', category: 'Cords & Elastics', url: 'products/waist-belts/index.html', keywords: ['waist', 'belt', 'functional', 'decorative'] },
+        
+        // Other
+        { name: 'Drawstring Cords', description: 'Premium drawstring cords', category: 'Other', url: 'products/drawstring-cords/index.html', keywords: ['drawstring', 'cord', 'premium'] },
+        { name: 'Jacket Elastic', description: 'Specialized jacket elastics', category: 'Other', url: 'products/jacket-elastic/index.html', keywords: ['jacket', 'elastic', 'specialized'] },
+        { name: 'Waist Belts', description: 'Functional and decorative belts', category: 'Other', url: 'products/waist-belts/index.html', keywords: ['waist', 'belt', 'functional', 'decorative'] },
         
         // Stickers
         { name: 'Barcode Stickers', description: 'Durable barcode stickers for identification', category: 'Stickers', url: 'products/barcode-stickers/index.html', keywords: ['barcode', 'sticker', 'identification', 'durable'] },
