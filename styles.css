@@ -1124,24 +1124,24 @@ body {
 }
 
 .footer-email-link {
-    color: #66b3ff !important;
+    color: #ffffff !important;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-email-link:hover {
-    color: #4da6ff !important;
+    color: #e5e5e5 !important;
     text-decoration: underline;
 }
 
 .footer-phone-link {
-    color: #66d966 !important;
+    color: #ffffff !important;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-phone-link:hover {
-    color: #4dd24d !important;
+    color: #e5e5e5 !important;
     text-decoration: underline;
 }
 
@@ -1994,7 +1994,7 @@ navbar-component .burger div {
 .coming-soon-category h4 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #2563eb;
+    color: #1a1a1a;
     margin-bottom: 1rem;
     padding-bottom: 0.75rem;
     border-bottom: 2px solid #e5e7eb;
@@ -2019,7 +2019,7 @@ navbar-component .burger div {
     content: "•";
     position: absolute;
     left: 0.5rem;
-    color: #2563eb;
+    color: #1a1a1a;
     font-weight: bold;
 }
 
