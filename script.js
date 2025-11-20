@@ -290,13 +290,13 @@ function initializeSearch() {
         // Tapes
         { name: 'Herringbone Tape', description: 'Flat woven tape with pattern', category: 'Tapes', url: 'products/herringbone-tape/index.html', keywords: ['herringbone', 'tape', 'woven', 'pattern'] },
         { name: 'Polyester Tape', description: 'General-purpose trim tape', category: 'Tapes', url: 'products/polyester-tape/index.html', keywords: ['polyester', 'tape', 'trim', 'general'] },
-        { name: 'Satin Tape', description: 'Smooth decorative tape for garment finishing', category: 'Tapes', url: 'products/satin-tape/index.html', keywords: ['satin', 'tape', 'decorative', 'finishing'] },
-        { name: 'Reflective Tape', description: 'High-visibility safety tape for enhanced visibility', category: 'Tapes', url: 'products/reflective-tape/index.html', keywords: ['reflective', 'tape', 'safety', 'visibility'] },
-        { name: 'Mobilon Tape', description: 'Specialized zipper and closure tape', category: 'Tapes', url: 'products/mobilon-tape/index.html', keywords: ['mobilon', 'tape', 'zipper', 'closure'] },
-        { name: 'Velcro Tape', description: 'Hook and loop fastening tape', category: 'Tapes', url: 'products/velcro-tape/index.html', keywords: ['velcro', 'tape', 'hook', 'loop'] },
-        { name: 'Velvet Tape', description: 'Luxurious velvet tape for premium applications', category: 'Tapes', url: 'products/velvet-tape/index.html', keywords: ['velvet', 'tape', 'luxury', 'premium'] },
-        { name: 'Scotch Tape', description: 'Clear adhesive tape for general applications', category: 'Tapes', url: 'products/scotch-tape/index.html', keywords: ['scotch', 'tape', 'clear', 'adhesive'] },
-        { name: 'Gum Tape', description: 'Water-activated tape for secure packaging', category: 'Tapes', url: 'products/gum-tape/index.html', keywords: ['gum', 'tape', 'water', 'packaging'] },
+        { name: 'Satin Tape', description: 'Smooth decorative tape for garment finishing', category: 'Coming Soon', url: 'products/satin-tape/index.html', keywords: ['satin', 'tape', 'decorative', 'finishing'] },
+        { name: 'Reflective Tape', description: 'High-visibility safety tape for enhanced visibility', category: 'Coming Soon', url: 'products/reflective-tape/index.html', keywords: ['reflective', 'tape', 'safety', 'visibility'] },
+        { name: 'Mobilon Tape', description: 'Specialized zipper and closure tape', category: 'Coming Soon', url: 'products/mobilon-tape/index.html', keywords: ['mobilon', 'tape', 'zipper', 'closure'] },
+        { name: 'Velcro Tape', description: 'Hook and loop fastening tape', category: 'Coming Soon', url: 'products/velcro-tape/index.html', keywords: ['velcro', 'tape', 'hook', 'loop'] },
+        { name: 'Velvet Tape', description: 'Luxurious velvet tape for premium applications', category: 'Coming Soon', url: 'products/velvet-tape/index.html', keywords: ['velvet', 'tape', 'luxury', 'premium'] },
+        { name: 'Scotch Tape', description: 'Clear adhesive tape for general applications', category: 'Coming Soon', url: 'products/scotch-tape/index.html', keywords: ['scotch', 'tape', 'clear', 'adhesive'] },
+        { name: 'Gum Tape', description: 'Water-activated tape for secure packaging', category: 'Coming Soon', url: 'products/gum-tape/index.html', keywords: ['gum', 'tape', 'water', 'packaging'] },
         
         // Cords & Elastics
         { name: 'Tube D. Cords', description: 'Tubular drawstring cords', category: 'Cords & Elastics', url: 'products/tube-cords/index.html', keywords: ['tube', 'cord', 'tubular', 'drawstring'] },
